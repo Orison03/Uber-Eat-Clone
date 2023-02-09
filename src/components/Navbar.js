@@ -12,6 +12,46 @@ const Navbar = () => {
   return (
     <>
       <section className="w-full h-screen text-black px-2">
+        {/* hero message */}
+        <article className="absolute top-[25%] md:top-[35%] w-[97%]">
+          <h1 className="text-black text-4xl font-bold md:text-5xl lg:text-6xl pb-8">
+            Order food to your door
+          </h1>
+          {/* location input */}
+          <div className="max-w-[96%] md:max-w-[80%] md:grid lg:max-w-[70%] grid-cols-11 gap-x-2 items-center font-family">
+            {/* delivery */}
+            <div className="col-span-5 flex items-center w-full bg-white px-3 py-4 mb-2">
+              <HiLocationMarker size={25} />
+              <input
+                type="text"
+                className="bg-transparent pl-2 font-bold focus:outline-none text-sm tracking-wider text-black w-full"
+                placeholder="Enter delivery address"
+              />
+            </div>
+            {/* deliver now */}
+            <div className="col-span-4 grid grid-cols-5 items-center w-full bg-white px-3 py-4 mb-2 gap-x-12 md:gap-x-0">
+              <div className="flex items-center col-span-4">
+                <HiClock size={25} />
+                <p className="pl-2 font-black tracking-wide">Deliver now</p>
+              </div>
+              {/* arrow down */}
+              <div className="col-span-1">
+                <FaChevronDown />
+              </div>
+            </div>
+            {/* find food */}
+            <div className="col-span-2 text-lg">
+              <button className="flex items-center bg-black w-full justify-center py-4 md:py-[1rem] mb-2 text-white font-bold rounded-md hover:bg-[#04C46C] ease-in duration-500 tracking-wider capitalize">
+                find food
+              </button>
+            </div>
+          </div>
+          {/* sign up */}
+          <div className="font-family text-white tracking-wide font-black pt-8">
+            <p><span className="underline w-fit pr-1 cursor-pointer
+            ">Sign In</span>for your recent addresses</p>
+          </div>
+        </article>
         <nav className="w-[100%] h-[15%] mx-auto flex justify-between items-center z-[-1]">
           {/* menu icon and uner eat text*/}
           <div className="flex items-center mr-28">
@@ -22,7 +62,7 @@ const Navbar = () => {
             />
             <div className="pl-8 cursor-pointer">
               <p className="text-2xl capitalize font-semibold md:text-4xl lg:text-4xl drop-shadow-md shadow-slate-300">
-                uber <span className="font-bold text-white">eats</span>
+                uber <span className="font-bold text-[#04C46C]">eats</span>
               </p>
             </div>
           </div>
@@ -41,7 +81,7 @@ const Navbar = () => {
               <BsPersonFill size={28} className="pr-2" /> Log in
             </button>
             <button className="flex items-center bg-black px-5 py-4 text-white font-semibold rounded-full hover:bg-[#04C46C] ease-in duration-500 border-transparent tracking-wide">
-              Sign up <FaChevronUp size={22} className="pl-2" />
+              Sign up <FaChevronUp size={22} className="pl-2 animate-bounce" />
             </button>
           </div>
           {/* logo */}
@@ -113,41 +153,6 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        {/* hero message */}
-        <article className="absolute top-[40%] font-family w-[95%]">
-          <h1 className="text-black text-4xl font-bold md:text-5xl lg:text-6xl pb-8">
-            Order food to your door
-          </h1>
-          {/* location input */}
-          <div className="max-w-[96%] md:max-w-[70%] md:grid grid-cols-11 gap-x-2 items-center">
-            {/* delivery */}
-            <div className="col-span-5 flex items-center w-full bg-white px-3 py-4 mb-2">
-              <HiLocationMarker size={25} />
-              <input
-                type="text"
-                className="bg-transparent pl-2 font-bold focus:outline-none text-sm tracking-wider text-black w-full"
-                placeholder="Enter delivery address"
-              />
-            </div>
-            {/* deliver now */}
-            <div className="col-span-4 grid grid-cols-5 items-center w-full bg-white px-3 py-4 mb-2 gap-x-16 md:gap-x-0">
-              <div className="flex items-center col-span-4">
-                <HiClock size={25} />
-                <p className="pl-2 font-black tracking-wide">Deliver now</p>
-              </div>
-              {/* arrow down */}
-              <div className="col-span-1">
-                <FaChevronDown />
-              </div>
-            </div>
-            {/* find food */}
-            <div className="col-span-2">
-              <button className="flex items-center bg-black w-full justify-center py-4 md:py-[1.1rem]  text-white font-bold rounded-md hover:bg-[#04C46C] ease-in duration-500 tracking-wider capitalize">
-                find food
-              </button>
-            </div>
-          </div>
-        </article>
       </section>
     </>
   );
