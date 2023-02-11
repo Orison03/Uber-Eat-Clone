@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 section{
-  background-image: url("./assets/bg\ pic.jpg");
+  background-image: url("./assets/bg\ picture.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
