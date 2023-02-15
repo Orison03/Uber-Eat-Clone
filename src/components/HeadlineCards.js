@@ -1,21 +1,18 @@
-import React from 'react'
-import Cards from './Cards'
-import Pizza1 from "../assets/pizza1.jpg"
-import Pizza2 from "../assets/pizza2.jpg"
-import burger1 from "../assets/burger1.jpg"
-import burger2 from "../assets/burger2.jpg"
-import food1 from "../assets/food1.jpg"
-import food2 from "../assets/food2.jpg"
+import React from "react";
+import Cards from "./Cards";
+import Pizza1 from "../assets/pizza1.jpg";
+import Pizza2 from "../assets/pizza2.jpg";
+import burger1 from "../assets/burger1.jpg";
+import burger2 from "../assets/burger2.jpg";
+import food1 from "../assets/food1.jpg";
+import food2 from "../assets/food2.jpg";
 
 const HeadlineCards = () => {
   return (
     <>
       {/* outer conatianer */}
       <main>
-        <div className="h-[40%] py-12 mx-auto w-[95%] font-family">
-          <h1 className="capitalize text-3xl font-black text-black pb-4 tracking-wide">
-            fast order
-          </h1>
+        <div className="h-[40%] py-16 mx-auto w-[95%] font-family">
           <article className="grid md:grid-cols-3 gap-y-6 md:gap-8">
             <Cards
               name="we deliver dessert too"
@@ -52,6 +49,6 @@ const HeadlineCards = () => {
       </main>
     </>
   );
-}
+};
 
-export default HeadlineCards
+export default HeadlineCards;
